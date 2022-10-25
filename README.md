@@ -1,8 +1,10 @@
 # ROKU
 ## Part 1
-## Designer:
+### Designer:
 Ishpreet Kaur
-## Developer:
+### Developer:
 Mamatha Vaidehi Ramesh
-## Subject:
+### Subject:
 Multimedia Authoring
+### License:
+MIT
