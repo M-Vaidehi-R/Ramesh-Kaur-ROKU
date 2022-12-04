@@ -9,14 +9,17 @@ Ishpreet Kaur
 ### Developer:
 Mamatha Vaidehi Ramesh
 
-#Usage
-still in developing stage.
+## Usage
+
+Still in developing stage.
 
 [For XD File](https://xd.adobe.com/view/6eddc860-35fd-4216-898e-4532f1292702-3b8e/)
 
 
 
 [For Google Drive](https://drive.google.com/drive/folders/1Gq1S_BJWLyr3qOCXpJt37Zeihm1dTbd6?usp=share_link)
+
+#### Designer and Developer notes have been included in the assets folder.
 
 ### License:
 MIT
