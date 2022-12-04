@@ -22,7 +22,7 @@ Still in developing stage.
 
 ![roku_logo](https://user-images.githubusercontent.com/90973094/205472005-8d70c4ba-1a09-40e6-a14e-e7c3a2a11a83.png)
 
-
+roku_logo_kids.png
 #### Designer and Developer notes have been included in the assets folder.
 
 ### License:
