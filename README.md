@@ -17,7 +17,10 @@ Still in developing stage.
 
 
 
-[For Google Drive](https://drive.google.com/drive/folders/1Gq1S_BJWLyr3qOCXpJt37Zeihm1dTbd6?usp=share_link)![roku_logo](https://user-images.githubusercontent.com/90973094/205472005-8d70c4ba-1a09-40e6-a14e-e7c3a2a11a83.png)
+[For Google Drive](https://drive.google.com/drive/folders/1Gq1S_BJWLyr3qOCXpJt37Zeihm1dTbd6?usp=share_link)
+
+
+![roku_logo](https://user-images.githubusercontent.com/90973094/205472005-8d70c4ba-1a09-40e6-a14e-e7c3a2a11a83.png)
 
 
 #### Designer and Developer notes have been included in the assets folder.
