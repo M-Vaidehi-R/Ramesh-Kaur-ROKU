@@ -1,0 +1,36 @@
+#main-header{
+    top:0;
+}
+
+#render-container{
+    margin-top:80px;
+}
+
+.login-submit{
+    margin-top: 2rem;
+}
+
+.log-in label {
+    margin: 1em .5em .5em 0;
+}
+
+.missing-field{
+    border: solid 1px red;
+}
+
+.float-right{
+    float: right;
+}
+
+.signup{
+    margin-left: 2rem;
+}
+
+.user-panel{
+    text-align: center;
+}
+
+.displayuser{
+    display: inline-block;
+    margin: 1rem;
+}

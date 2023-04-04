@@ -1,4 +1,9 @@
 //change all names accordingly later
+import LogInPage from './components/TheLoginComponent.js';
+//import UsersComponent from './components/TheSingleUserComponent.js';
+import AllUsersPage from './components/TheAllUsersComponent.js';
+import HomePage from './components/TheHomePage.js';
+import KidsPage from './components/TheKidsHomePage.js';
 
 const { createApp } = Vue;
 //importing createApp fromVue library :)
