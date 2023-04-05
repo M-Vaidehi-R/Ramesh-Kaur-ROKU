@@ -4,6 +4,7 @@ import LogInPage from './components/TheLoginComponent.js';
 import AllUsersPage from './components/TheAllUsersComponent.js';
 import HomePage from './components/TheHomePage.js';
 import KidsPage from './components/TheKidsHomePage.js';
+import MovieDetails from './components/TheMovieDetailsComponent.js';
 
 const { createApp } = Vue;
 //importing createApp fromVue library :)
@@ -34,6 +35,11 @@ const router = VueRouter.createRouter({
             path: '/kidshome', // this would be the kids home page
             name: 'kidshome',
             component: KidsPage
+        },
+        {
+            path: '/movies/:movieId',
+            name: 'MovieDetails',
+            component: MovieDetails
         }
 
     ]
@@ -57,20 +63,20 @@ const app = Vue.createApp({
 
     methods: {
 
-        logUserOut(){
-            this.authenticated=false;
+        logUserOut() {
+            this.authenticated = false;
             window.localStorage.removeItem('user');
-            this.$router.push({name:'login'});
+            this.$router.push({ name: 'login' });
         },
 
-        loggedIn(){
-            this.authenticated=true;
+        loggedIn() {
+            this.authenticated = true;
         }
     }
 });
 
 app.use(router)  //this enables routing in the website
-  
+
 app.mount('#app')  //mounting it to the section with id "app"
 
 
