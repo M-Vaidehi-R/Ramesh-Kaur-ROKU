@@ -29,7 +29,7 @@ export default {
     <button v-if="signUp" @click="trySignUp"
     type="submit" 
     class="btn btn-primary login-submit signup"
-  >Join!
+  >Sign Up!
 </button>
   </section>
 
@@ -47,7 +47,7 @@ export default {
     methods: {
 
         trySignUp() {
-            debugger;
+            this.$router.push({ name: 'signup' });
         },
 
 
@@ -88,7 +88,7 @@ export default {
                 .then(res => res.json())
                 .then(data => {
                     if (data.message == "no user") {
-
+                        //console.log("no user");
                         //check for no user, and then provide a signup button
                         this.signUp = true;
 

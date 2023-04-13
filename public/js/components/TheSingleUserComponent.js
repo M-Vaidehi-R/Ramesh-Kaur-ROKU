@@ -16,7 +16,7 @@ export default{
     methods: {
         navToHomePage(){
             console.log("this user has the permission level:", this.user.permissions);
-            let targetHome=(this.user.permissions < 4)?"kidshome":"home";
+            let targetHome=(this.user.permissions < 4)?"kidshome":"TheAdultPageMovies";
             this.$router.push({ name: targetHome});
 
             //debugger;
