@@ -1,18 +1,16 @@
-
-
-const apiKey = 'k_qpian6m7';
+//const apiKey = 'k_qpian6m7';
 
 export default {
 
-    name: 'TheMovieDetails',
+    name: 'TheSeriesDetails',
 
     template: `
     
     <div>
 
-        <h1>{{movie.title}}</h1>
-        <img :src="movie.image" :alt="movie.title">
-        <p>{{ movie.plot }}</p>
+        <h1>{{series.title}}</h1>
+        <img :src="series.image" :alt="series.title">
+        <p>{{ series.plot }}</p>
 
     </div>
 
@@ -20,21 +18,21 @@ export default {
 
     data() {
         return {
-            movie: []
+            series: []
         };
     },
 
     methods: {
-        fetchMovie() {
+        fetchSeries() {
             const requestOptions = {
               method: 'GET',
               redirect: 'follow'
             };
-            const movieId = this.$route.params.movieId;
-            fetch(`https://imdb-api.com/en/API/Title/k_qpian6m7/${movieId}`, requestOptions)
+            const seriesId = this.$route.params.seriesId;
+            fetch(`https://imdb-api.com/en/API/Title/k_qpian6m7/${seriesId}`, requestOptions)
               .then(response => response.json())
               .then(data => {
-                this.movie = data;
+                this.series = data;
               })
               .catch(error => {
                 console.error(error);
@@ -43,8 +41,7 @@ export default {
     },
 
     mounted() {
-        this.fetchMovie();
+        this.fetchSeries();
     }
 
 };
-

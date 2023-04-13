@@ -1,8 +1,18 @@
 
-const apiKey = 'k_qpian6m7';
+//const apiKey = 'k_qpian6m7';
 
 export default {
   name: 'TheHomePageComponent',
+  template: `
+    <div>
+      <div v-for="movie in movies" :key="movie.id">
+        <router-link :to="{ name: 'MovieDetails', params: { movieId: movie.id } }">
+          <img :src="movie.image" :alt="movie.title">
+        </router-link>
+        <h2>{{ movie.title }}</h2>
+      </div>
+    </div>
+  `,
   data() {
     return {
       movies: []
@@ -26,15 +36,6 @@ export default {
           console.error(error);
         });
     }
-  },
-  template: `
-    <div>
-      <div v-for="movie in movies" :key="movie.id">
-        <router-link :to="{ name: 'MovieDetails', params: { movieId: movie.id } }">
-          <img :src="movie.image" :alt="movie.title">
-        </router-link>
-        <h2>{{ movie.title }}</h2>
-      </div>
-    </div>
-  `
+  }
+  
 };

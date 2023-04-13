@@ -34,3 +34,7 @@
     display: inline-block;
     margin: 1rem;
 }
+
+body{
+    background-color: rgb(110, 227, 92);
+}
