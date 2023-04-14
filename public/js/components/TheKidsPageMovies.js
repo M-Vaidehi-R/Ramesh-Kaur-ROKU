@@ -1,7 +1,7 @@
 //const apiKey = 'k_qpian6m7';
-
+console.log("movies");
 export default {
-  name: 'TheAdultPageMovies',
+  name: 'TheKidsPageMovies',
 
   data() {
     return {
@@ -20,7 +20,7 @@ export default {
         method: 'GET',
         redirect: 'follow'
       };
-      fetch(`https://imdb-api.com/API/AdvancedSearch/k_qpian6m7?title=${this.searchTerm}`, requestOptions)
+      fetch(`https://imdb-api.com/API/AdvancedSearch/k_qpian6m7?title=${this.searchTerm}&content_rating=us%3Anc17`, requestOptions)
         .then(response => response.json())
         .then(data => {
           this.movies = data.results;
@@ -29,7 +29,7 @@ export default {
             behavior: 'smooth'
           });
           
-          this.visibleMovies = 8; // reset visibleMovies to 12
+          this.visibleMovies = 8; 
         })
         .catch(error => {
           console.error(error);
@@ -41,7 +41,7 @@ export default {
         method: 'GET',
         redirect: 'follow'
       };
-      fetch(`https://imdb-api.com/API/AdvancedSearch/k_qpian6m7?release_date=1973-01-01,2023-01-01`, requestOptions)
+      fetch(`https://imdb-api.com/API/AdvancedSearch/k_qpian6m7?title_type=feature&release_date=1973-01-01,2023-01-01&certificates=us:NC-17`, requestOptions)
         .then(response => response.json())
         .then(data => {
           this.movies = data.results;
@@ -62,25 +62,28 @@ export default {
   },
 
   template: `
-    <div class="adult_header">
-      <nav class="adult_nav">
+  <div class="kids_header">
+    <nav>
+      <div class="kids_nav">
         <ul>
-          <li><router-link to="/adultpagemovies">Movies</router-link></li>
-          <li><router-link to="/adultpageseries">Series</router-link></li>
-          <li><router-link to="/adultpagedocumentaries">Documentaries</router-link></li>
+          <li><router-link to="/kidspagemovies">Movies</router-link></li>
+          <li><router-link to="/kidspageseries">Series</router-link></li>
+          <li><router-link to="/kidspageanimation">Animation</router-link></li>
         </ul>
+      </div>
       </nav>
 
       <div>
-        <!-- hamburger -->
+        <!--hamburger -->
       </div>
 
       <div>
-        <!-- <img :src="" alt="user image">-->
+        <!--<img :src="" alt="user image">-->
       </div>
-    </div>
+   
+  </div>
 
-    <div>  <!--The slice method is a built-in JavaScript method that returns a new array with a portion of the original array-->
+    <div>
       <div v-for="(movie, index) in movies.slice(0, visibleMovies)" :key="movie.id">
         <router-link :to="{ name: 'MovieDetails', params: { movieId: movie.id } }">
           <img :src="movie.image" :alt="movie.title">
@@ -112,7 +115,7 @@ export default {
         </div>
       
         <div>
-          <router-link to="/settings">Settings</router-link>
+          <!--setting-->
         </div>
 
         <div>

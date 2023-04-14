@@ -1,14 +1,23 @@
 
 import LogInPage from './components/TheLoginComponent.js';
+import SignUpComponent from './components/ThesignUpComponent.js';
 import AllUsersPage from './components/TheAllUsersComponent.js';
+
+
 import AdultMoviePage from './components/TheAdultPageMovies.js';
 import AdultSeriesPage from './components/TheAdultPageSeries.js';
 import AdultDocumentaryPage from './components/TheAdultPageDocumentries.js';
-import KidsPage from './components/TheKidsHomePage.js';
+
+
+import KidsMoviesPage from './components/TheKidsPageMovies.js';
+import KidsSeriesPage from './components/TheKidsPageSeries.js';
+import KidsAnimationPage from './components/TheKidsPageAnimation.js';
+
+
 import MovieDetails from './components/TheMovieDetailComponent.js';
 import SeriesDetails from './components/TheSeriesDetailComponent.js';
 import DocumentaryDetails from './components/TheDocumentaryDetailComponent.js';
-import SignUpComponent from './components/ThesignUpComponent.js';
+import AnimationDetails from './components/TheAnimationDetailComponent.js';
 
 const { createApp } = Vue;
 
@@ -41,10 +50,23 @@ const router = VueRouter.createRouter({
             component: AdultDocumentaryPage
         },
         {
-            path: '/kidshome',
-            name: 'kidshome',
-            component: KidsPage
+            path: '/kidspagemovies',
+            name: 'TheKidsPageMovies',
+            component: KidsMoviesPage
         },
+
+        {
+            path: '/kidspageseries',
+            name: 'TheKidsPageSeries',
+            component: KidsSeriesPage
+        },
+
+        {
+            path: '/kidspageanimation',
+            name: 'TheKidsPageAnimation',
+            component: KidsAnimationPage
+        },
+
         {
             path: '/movies/:movieId',
             name: 'MovieDetails',
@@ -59,6 +81,11 @@ const router = VueRouter.createRouter({
             path: '/documentaries/:documentaryId',
             name: 'DocumentaryDetails',
             component: DocumentaryDetails
+        },
+        {
+            path: '/animations/:animationId',
+            name: 'AnimationDetails',
+            component: AnimationDetails
         },
         {
             path: '/signup',
