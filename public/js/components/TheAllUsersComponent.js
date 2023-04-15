@@ -6,9 +6,7 @@ export default {
     template: `
     <section class="user-panel">
 
-        <h2>Who is using Roku?</h2>
-
-        <section>
+        <section class="kids_title_display kids_title_container">
 
             <user v-for="user in users" :user="user"></user>
 

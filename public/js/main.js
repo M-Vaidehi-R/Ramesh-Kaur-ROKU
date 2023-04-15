@@ -1,4 +1,6 @@
 
+import LandingPage from './components/TheLandingPage.js';
+import EntryPage from './components/TheEntryPage.js';
 import LogInPage from './components/TheLoginComponent.js';
 import SignUpComponent from './components/ThesignUpComponent.js';
 import AllUsersPage from './components/TheAllUsersComponent.js';
@@ -26,6 +28,16 @@ const router = VueRouter.createRouter({
     routes: [
         {
             path: '/',
+            name: 'landingPage',
+            component: LandingPage
+        },
+        {
+            path: '/entry',
+            name: 'entry',
+            component: EntryPage
+        },
+        {
+            path: '/login',
             name: 'login',
             component: LogInPage
         },

@@ -57,6 +57,7 @@ export default {
             <button @click.prevent="submitForm">Sign Up!</button>
           </div>
         </form>
+        <div v-if="success">User Created Successfully</div>
       </div>
       </section>
     `,
@@ -69,7 +70,8 @@ export default {
       email: '',
       username: '',
       password: '',
-      avatar: ''
+      avatar: '',
+      success: false
     }
   },
 
@@ -96,6 +98,8 @@ export default {
         .then(data => {
           console.log(data);
           if (data.success) {
+            this.success=true;
+            console.log(this.success);
             this.$emit('signedUp');
             this.fname = '';
             this.lname = '';
