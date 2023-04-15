@@ -30,7 +30,7 @@ user login system
 * Filter content based on age or ratings
 * Like, share, and comment on media selections
 ## Contributors
-*Ishpreet Kaur => Designer
-*Mamatha Ramesh => Developer
+* Ishpreet Kaur => Designer
+* Mamatha Ramesh => Developer
 ## License
 MIT
