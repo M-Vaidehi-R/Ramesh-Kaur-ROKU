@@ -28,7 +28,7 @@ export default {
             top: 0,
             behavior: 'smooth'
           });
-          
+
           this.visibleMovies = 8; // reset visibleMovies to 12
         })
         .catch(error => {
@@ -63,67 +63,41 @@ export default {
 
   template: `
     <div class="adult_header">
+    <div>
+    <!-- <img :src="" alt="user image">-->
+    </div>
+
       <nav class="adult_nav">
         <ul>
-          <li><router-link to="/adultpagemovies">Movies</router-link></li>
+          <li class="adult_active_nav"><router-link to="/adultpagemovies">Movies</router-link></li>
           <li><router-link to="/adultpageseries">Series</router-link></li>
           <li><router-link to="/adultpagedocumentaries">Documentaries</router-link></li>
         </ul>
       </nav>
-
-      <div>
-        <!-- hamburger -->
-      </div>
-
-      <div>
-        <!-- <img :src="" alt="user image">-->
-      </div>
     </div>
 
-    <div>  <!--The slice method is a built-in JavaScript method that returns a new array with a portion of the original array-->
-      <div v-for="(movie, index) in movies.slice(0, visibleMovies)" :key="movie.id">
+    <div>
+    <div class="search">
+      <form @submit.prevent="searchMovies">
+        <input type="text" v-model="searchTerm" placeholder="Search for movies">
+        <button type="submit"><img src="/images-roku/search.png"></button>
+      </form>
+    </div>
+  </div>
+
+    <div class="page_display">
+    <div class="title_display">  <!--The slice method is a built-in JavaScript method that returns a new array with a portion of the original array-->
+      <div class="title_container" v-for="(movie, index) in movies.slice(0, visibleMovies)" :key="movie.id">
         <router-link :to="{ name: 'MovieDetails', params: { movieId: movie.id } }">
           <img :src="movie.image" :alt="movie.title">
         </router-link>
         <h2>{{ movie.title }}</h2>
-      </div>
-      <div v-if="visibleMovies < movies.length">
-        <button @click="showMoreMovies">Show more movies</button>
-      </div>
-    </div>
-
-    <section>
-      <h2>footer</h2>
-
-      <div class="go_back_footer"></div>
-
-      <div class="footer_menu">
-        <div>
-          <router-link to="/">Home</router-link>
-        </div>
-
-        <div>
-          <div>
-            <form @submit.prevent="searchMovies">
-              <input type="text" v-model="searchTerm" placeholder="Search for movies">
-              <button type="submit">Search</button>
-            </form>
-          </div>
-        </div>
-      
-        <div>
-          <router-link to="/settings">Settings</router-link>
-        </div>
-
-        <div>
-          <router-link to="/watchlist">Watchlist</router-link>
-        </div>
-      </div>
-
-      <div class="go_front_footer"></div>
-
-  <p>© 2023 _ROKU FLASHBACK_</p>
-</section>
+      </div>  <!--end title_container-->
+    </div> <!--end title_display-->
+    <div class="show-more" v-if="visibleMovies < movies.length">
+    <button @click="showMoreMovies">Show more movies</button>
+  </div>
+  </div
 
 `
 };

@@ -24,24 +24,35 @@
     <title>.:Roku Flashback:.</title>
 </head>
 
+
+
 <body>
 
     <main id="app">
         <header id="main-header">
-            <img src="images/roku.svg" alt="Roku logo" width="90"><span>FlashBack</span>
-            <nav class="float-right">
-                <ul v-if="authenticated">
-                    <li><i class="fas fa-user-circle"></i></li>
-                    <li><i class="fas fa-cog"></i></li>
-                    <li @click="logUserOut"><i class="fas fa-power-off"></i></li>
-                </ul>
-            </nav>
+            <div class="html_header">
+                <div class="html_logo">
+                    <img v-if="authenticated" src="/images-roku/roku_logo.png" alt="Roku logo" width="90"><span
+                        hidden>FlashBack</span>
+                </div>
+
+                <div>
+                    <nav class="float-right">
+                        <ul v-if="authenticated" class="html_power">
+                            <li @click="logUserOut"><img src="/images-roku/power-button.png" alt="power button"></i>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+            </div>
         </header>
 
 
         <router-view @setauthenticated="loggedIn" id="render-container"></router-view>
     </main>
 
+    <footer><p>© 2023 _ROKU FLASHBACK_</p></footer>
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="https://unpkg.com/vue-router@4"></script>

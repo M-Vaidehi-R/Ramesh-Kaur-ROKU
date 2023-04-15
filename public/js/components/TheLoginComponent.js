@@ -3,34 +3,40 @@ export default {
     template: `
 
     <section class="container">
-    <div class="jumbotron">
-        <h1>Welcome to Flashblack!</h1>
-        <p class="lead">
-        Before revisiting your favourite movies, tv shows or music from yesteryear
-        </p>
-    </div>
 
-    <section class="log-in">
-      <label class="sr-only" for="inlineFormInputName">Name</label>
-      <input ref='username' v-model="username" type="text" class="form-control" id="inlineFormInputName" placeholder="username" required>
+    <h2 hidden>Sign In Form</h2>
+        <div class="sign-in-logo">
+            <img src="/images-roku/roku_logo.png" alt="logo">
+            <hr>
+            <hr>
+            <hr>
+        </div>
 
-      <label class="sr-only" for="inlineFormPassword">Password</label>
-      <input ref='password' v-model="password" type="password" class="form-control" id="inlineFormPassword" placeholder="password" required>
-    </section>
+        <div class="sign-in">
+            <div class="log-in">
+                <label class="sr-only" for="inlineFormInputName">Name</label>
+                <input ref='username' v-model="username" type="text" class="form-control" id="inlineFormInputName" placeholder="username" required>
 
-    <button @click="tryLogIn"
-        type="submit" 
-        class="btn btn-primary login-submit"
-      >Go!
-    </button>
+                <label class="sr-only" for="inlineFormPassword">Password</label>
+                <input ref='password' v-model="password" type="password" class="form-control" id="inlineFormPassword" placeholder="password" required>
+            </div>  <!--end log in-->
 
-    <!--if the user doesn't exist in the database afyer we try to log them in, they might not exist. Give them the option to sign up -->
+            <div class="need-help">
+            <label>
+            <input type="checkbox" name="remember-me">Remember me
+            </label>
 
-    <button v-if="signUp" @click="trySignUp"
-    type="submit" 
-    class="btn btn-primary login-submit signup"
-  >Sign Up!
-</button>
+            <p>Need Help?</p>
+            </div>
+
+            <div class="signInbuttons">
+                <button @click="tryLogIn"type="submit" class="btn btn-primary login-submit">Go!</button>
+
+                <!--if the user doesn't exist in the database afyer we try to log them in, they might not exist. Give them the option to sign up -->
+
+                <button v-if="signUp" @click="trySignUp"type="submit" class="btn btn-primary login-submit signup">Sign Up!</button>
+            </div>
+        </div <!--end sign in-->
   </section>
 
     `,

@@ -1,0 +1,568 @@
+body {
+    background-image: linear-gradient(rgba(255, 255, 255, .2), rgba(255, 255, 255, .2)), url("/images-roku/background-film-roll.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, $dark-violet, $dark-gray);
+    row-gap: 2rem;
+
+    position: absolute;
+    top: 8%;
+    right: 0;
+    //transform: translate(50%, -50%);
+    min-width: 10rem;
+    max-width: 50rem;
+    height: auto;
+    //border-radius: 13rem 0px 0px 13rem;
+    padding: 4rem 2rem;
+    //border: red solid 2px;
+    margin: auto;
+}
+
+.sign-in-logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    img {
+        min-width: 40%;
+        max-width: 50%;
+        height: auto;
+    }
+
+    hr {
+        border: white solid 2px;
+        opacity: 100%;       
+        min-width: 50%;
+        max-width: 70%;
+    }
+}
+
+.sign-in {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.log-in {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+
+    input {
+        height: 2rem;
+        width: 12rem;
+        border-radius: 1.5rem 0px 1.5rem 0rem;
+
+        font-size: .85rem;
+    }
+}
+
+.need-help {
+    width: 12rem;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    //border: red solid 2px;
+    right: 0;
+
+    label {
+        color: white;
+        font-size: .85rem;
+        font-weight: 200;
+
+        input[type="checkbox"] {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border: 2px solid #ffffff;
+            border-radius: 2px;
+            outline: none;
+            margin-right: 10px;
+            vertical-align: middle;
+            cursor: pointer;
+        }
+
+        input[type="checkbox"]:checked {
+            background-color: $light-purple;
+        }
+
+        input[type="checkbox"]:checked::before {
+            content: '\2714';
+            color: white;
+            font-size: 14px;
+            position: absolute;
+            top: 1px;
+            left: 4px;
+        }
+
+
+    }
+
+
+    p {
+        font-size: .85rem;
+        font-weight: 200;
+        color: white;
+        text-align: right;
+    }
+}
+
+.signInbuttons {
+    button {
+        background-color: $orange;
+        height: 2rem;
+        width: 4rem;
+        border-radius: 1.5rem 0px 1.5rem 0rem;
+    }
+
+    button:hover {
+        background-color: $light-purple;
+    }
+}
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    @media only screen and (min-width: 568px) {
+
+        body {
+            background-image: linear-gradient(rgba(255, 255, 255, .2), rgba(255, 255, 255, .2)), url("/images-roku/background-film-roll.jpg");
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to right, $dark-violet, $dark-gray);
+            column-gap: 2rem;
+
+            position: absolute;
+            top: 8%;
+            right: 0;
+            //transform: translate(50%, -50%);
+            min-width: 30rem;
+            max-width: 40rem;
+            height: auto;
+            border-radius: 13rem 0px 0px 13rem;
+            padding: 7rem 4rem;
+            //border: red solid 2px;
+            margin: auto;
+        }
+
+        .sign-in-logo {
+            img {
+                min-width: 50%;
+                max-width: 100%;
+                height: auto;
+            }
+
+            hr {
+                border: white solid 2px;
+                opacity: 100%;
+                min-width: 100%;
+                max-width: 150%;
+            }
+        }
+
+        .sign-in {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .log-in {
+            display: flex;
+            flex-direction: column;
+            row-gap: 1.2rem;
+
+            input {
+                height: 2.5rem;
+                min-width: 10rem;
+                max-width: 15rem;
+                border-radius: 1.5rem 0px 1.5rem 0rem;
+
+                font-size: 1rem;
+            }
+        }
+
+        .need-help {
+            min-width: 10rem;
+            max-width: 15rem;
+            margin-top: 1rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            //border: red solid 2px;
+            right: 0;
+
+            label {
+                color: white;
+                font-size: .85rem;
+                font-weight: 200;
+
+                input[type="checkbox"] {
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
+                    display: inline-block;
+                    width: 16px;
+                    height: 16px;
+                    border: 2px solid #ffffff;
+                    border-radius: 2px;
+                    outline: none;
+                    margin-right: 10px;
+                    vertical-align: middle;
+                    cursor: pointer;
+                }
+
+                input[type="checkbox"]:checked {
+                    background-color: $light-purple;
+                }
+
+                input[type="checkbox"]:checked::before {
+                    content: '\2714';
+                    color: white;
+                    font-size: 14px;
+                    position: absolute;
+                    top: 1px;
+                    left: 4px;
+                }
+
+
+            }
+
+
+            p {
+                font-size: .85rem;
+                font-weight: 200;
+                color: white;
+                text-align: right;
+            }
+        }
+
+        .signInbuttons {
+            button {
+                background-color: $orange;
+                height: 3rem;
+                width: 8rem;
+                border-radius: 1rem 0px 1rem 0rem;
+            }
+
+            button:hover {
+                background-color: $light-purple;
+            }
+        }
+
+    }
+
+
+
+
+
+
+
+    @media only screen and (min-width: 1024px) {
+
+        body {
+            background-image: linear-gradient(rgba(255, 255, 255, .2), rgba(255, 255, 255, .2)), url("/images-roku/background-film-roll.jpg");
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to right, $dark-violet, $dark-gray);
+            column-gap: 5rem;
+
+            position: absolute;
+            top: 8%;
+            right: 0;
+            //transform: translate(50%, -50%);
+            min-width: 50rem;
+            max-width: 60rem;
+            height: auto;
+            border-radius: 13rem 0px 0px 13rem;
+            padding: 7rem 4rem;
+            //border: red solid 2px;
+            margin: auto;
+        }
+
+        .sign-in-logo {
+            img{
+                min-width: 70%;
+                max-width: 100%;
+            }
+            hr {
+            border: white solid 2px;
+            opacity: 100%;
+            min-width: 100%;
+            max-width: 170%;
+        }
+    }
+
+        .sign-in {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .log-in {
+            display: flex;
+            flex-direction: column;
+            row-gap: 1.5rem;
+
+            input {
+                height: 3rem;
+                width: 17rem;
+                border-radius: 1.5rem 0px 1.5rem 0rem;
+
+                font-size: 1.2rem;
+            }
+        }
+
+        .need-help {
+            width: 17rem;
+            margin-top: 1rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            //border: red solid 2px;
+            right: 0;
+
+            label {
+                color: white;
+                font-size: 1rem;
+                font-weight: 300;
+
+                input[type="checkbox"] {
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
+                    display: inline-block;
+                    width: 16px;
+                    height: 16px;
+                    border: 2px solid #ffffff;
+                    border-radius: 2px;
+                    outline: none;
+                    margin-right: 10px;
+                    vertical-align: middle;
+                    cursor: pointer;
+                }
+
+                input[type="checkbox"]:checked {
+                    background-color: $light-purple;
+                }
+
+                input[type="checkbox"]:checked::before {
+                    content: '\2714';
+                    color: white;
+                    font-size: 14px;
+                    position: absolute;
+                    top: 1px;
+                    left: 4px;
+                }
+
+
+            }
+
+
+            p {
+                font-size: 1rem;
+                font-weight: 300;
+                color: white;
+                text-align: right;
+            }
+        }
+
+        .signInbuttons {
+            button {
+                background-color: $orange;
+                height: 3rem;
+                width: 6rem;
+                border-radius: 1.5rem 0px 1.5rem 0rem;
+            }
+
+            button:hover {
+                background-color: $light-purple;
+            }
+        }
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+    @media only screen and (min-width: 1550px) {
+        body {
+            background-image: linear-gradient(rgba(255, 255, 255, .2), rgba(255, 255, 255, .2)), url("/images-roku/background-film-roll.jpg");
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to right, $dark-violet, $dark-gray);
+            column-gap: 10rem;
+
+            position: absolute;
+            top: 15%;
+            right: 0;
+            //transform: translate(50%, -50%);
+            width: 90rem;
+            height: auto;
+            padding: 40px;
+            border-radius: 13rem 0px 0px 13rem;
+            padding: 10rem 5rem;
+            //border: red solid 2px;
+            margin: auto;
+        }
+
+        .sign-in-logo {
+            img{
+                min-width: 70%;
+                max-width: 100%;
+            }
+            hr {
+            border: white solid 2px;
+            opacity: 100%;
+            min-width: 100%;
+            max-width: 190%;
+        }
+    }
+
+        .sign-in {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .log-in {
+            display: flex;
+            flex-direction: column;
+            row-gap: 2rem;
+
+            input {
+                height: 3.5rem;
+                width: 20rem;
+                border-radius: 1.5rem 0px 1.5rem 0rem;
+
+                font-size: 1.5rem;
+            }
+        }
+
+        .need-help {
+            width: 20rem;
+            margin-top: 1rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            //border: red solid 2px;
+            right: 0;
+
+            label {
+                color: white;
+                font-size: 1.2rem;
+                font-weight: 300;
+
+                input[type="checkbox"] {
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
+                    display: inline-block;
+                    width: 16px;
+                    height: 16px;
+                    border: 2px solid #ffffff;
+                    border-radius: 2px;
+                    outline: none;
+                    margin-right: 10px;
+                    vertical-align: middle;
+                    cursor: pointer;
+                }
+
+                input[type="checkbox"]:checked {
+                    background-color: $light-purple;
+                }
+
+                input[type="checkbox"]:checked::before {
+                    content: '\2714';
+                    color: white;
+                    font-size: 14px;
+                    position: absolute;
+                    top: 1px;
+                    left: 4px;
+                }
+
+
+            }
+
+
+            p {
+                font-size: 1.2rem;
+                font-weight: 300;
+                color: white;
+                text-align: right;
+            }
+        }
+
+        .signInbuttons {
+            button {
+                background-color: $orange;
+                height: 3.5rem;
+                width: 8rem;
+                border-radius: 1.5rem 0px 1.5rem 0rem;
+            }
+
+            button:hover {
+                background-color: $light-purple;
+            }
+        }
+    }

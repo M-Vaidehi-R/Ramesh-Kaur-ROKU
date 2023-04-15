@@ -63,34 +63,40 @@ export default {
 
   template: `
   <div class="kids_header">
-    <nav>
-      <div class="kids_nav">
+
+  <div>
+  <!--<img :src="" alt="user image">-->
+  </div>
+
+    <nav class="kids_nav">
         <ul>
           <li><router-link to="/kidspagemovies">Movies</router-link></li>
           <li><router-link to="/kidspageseries">Series</router-link></li>
-          <li><router-link to="/kidspageanimation">Animation</router-link></li>
+          <li class="kids_active_nav"><router-link to="/kidspageanimation">Animation</router-link></li>
         </ul>
-      </div>
-      </nav>
+    </nav>
 
-      <div>
-        <!--hamburger -->
-      </div>
-
-      <div>
-        <!--<img :src="" alt="user image">-->
-      </div>
-   
   </div>
 
-    <div>
-      <div v-for="(animation, index) in animations.slice(0, visibleAnimations)" :key="animation.id">
+  <div>
+  <div class="kids_search">
+    <form @submit.prevent="searchAnimations">
+      <input type="text" v-model="searchTerm" placeholder="Search for animations">
+      <button type="submit"><img src="/images-roku/search.png"></button>
+</form>
+</div>
+</div>
+
+  <div class="kids_page_display">
+    <div class="kids_title_display">
+      <div class="kids_title_container" v-for="(animation, index) in animations.slice(0, visibleAnimations)" :key="animation.id">
         <router-link :to="{ name: 'AnimationDetails', params: { animationId: animation.id } }">
           <img :src="animation.image" :alt="animation.title">
-        </router-link>
+        </router-link> 
         <h2>{{ animation.title }}</h2>
       </div>
-      <div v-if="visibleAnimations < animations.length">
+      </div>
+      <div class="kids-show-more" v-if="visibleAnimations < animations.length">
         <button @click="showMoreAnimations">Show more animations</button>
       </div>
     </div>
@@ -105,14 +111,6 @@ export default {
           <router-link to="/">Home</router-link>
         </div>
 
-        <div>
-          <div>
-            <form @submit.prevent="searchAnimations">
-              <input type="text" v-model="searchTerm" placeholder="Search for animations">
-              <button type="submit">Search</button>
-        </form>
-      </div>
-    </div>
   
       <div>
         <router-link to="/settings">Settings</router-link>

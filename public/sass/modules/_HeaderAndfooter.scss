@@ -1,0 +1,560 @@
+.adult_header {
+    margin: 0 auto;
+    max-width: 270px;
+    padding: 1rem;
+    align-items: center;
+    background-color: $dark-purple;
+    border-radius: 1.4rem 0px 1.4rem 0rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+}
+
+.adult_nav {
+    width: 50px;
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        column-gap: .2rem;
+
+        li a {
+            font-size: .8rem;
+            color: white;
+            font-weight: 400;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            color: $orange;
+        }
+    }
+}
+
+.adult_active_nav a{
+    color: $orange;
+}
+
+.search{
+    max-width: 270px;
+    margin: 0 auto;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    column-gap: 1rem;
+
+    form{
+
+        input{
+            border-radius: 1.3rem 0px 1.3rem 0rem; 
+            border: $dark-purple solid 2px;
+            height: 2.5rem;
+            width: 14rem;
+            color: $dark-purple;
+        }
+
+        button{
+            background-color: $dark-purple;
+        }
+    }
+}
+
+
+
+
+@media only screen and (min-width: 568px) {
+
+    .adult_header {
+        margin: 0 auto;
+        max-width: 450px;
+        padding: 2rem;
+        align-items: center;
+        background-color: $dark-purple;
+        border-radius: 1.7rem 0px 1.7rem 0rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-bottom: 2.3rem;
+    }
+    
+    .adult_nav {
+        width: 200px;
+    
+        ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            column-gap: .6rem;
+    
+            li a {
+                font-size: .9rem;
+                color: white;
+                font-weight: 300;
+                text-decoration: none;
+            }
+    
+            li a:hover {
+                color: $orange;
+            }
+        }
+    }
+    
+    .adult_active_nav a{
+        color: $orange;
+    }
+
+    .search{
+        max-width: 450px;
+        margin: 2rem auto;
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        column-gap: 1rem;
+    
+        form{
+    
+            input{
+                border-radius: 1.3rem 0px 1.3rem 0rem; 
+                border: $dark-purple solid 2px;
+                height: 2.7rem;
+                width: 15rem;
+                color: $dark-purple;
+            }
+    
+            button{
+                background-color: $dark-purple;
+            }
+        }
+    }
+}
+
+
+
+
+@media only screen and (min-width: 1024px) {
+
+    .adult_header {
+        margin: 0 auto;
+        max-width: 800px;
+        padding: 2rem;
+        align-items: center;
+        background-color: $dark-purple;
+        border-radius: 1.7rem 0px 1.7rem 0rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-bottom: 2.5rem;
+    }
+    
+    .adult_nav {
+        width: 500px;
+    
+        ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            column-gap: .6rem;
+    
+            li a {
+                font-size: 1.4rem;
+                color: white;
+                font-weight: 600;
+                text-decoration: none;
+            }
+    
+            li a:hover {
+                color: $orange;
+            }
+        }
+    }
+    
+    .adult_active_nav a{
+        color: $orange;
+    }
+
+    .search{
+        max-width: 800px;
+        margin: 2rem auto;
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        column-gap: 1rem;
+    
+        form{
+    
+            input{
+                border-radius: 1.3rem 0px 1.3rem 0rem; 
+                border: $dark-purple solid 2px;
+                height: 3rem;
+                width: 17rem;
+                color: $dark-purple;
+            }
+    
+            button{
+                background-color: $dark-purple;
+            }
+        }
+    }
+
+}
+
+
+
+
+
+@media only screen and (min-width: 1550px) {
+
+.adult_header {
+    margin: 0 auto;
+    max-width: 1000px;
+    //padding: 2rem;
+    align-items: center;
+    background-color: $dark-purple;
+    border-radius: 1.7rem 0px 1.7rem 0rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 3rem;
+}
+
+.adult_nav {
+    width: 700px;
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        column-gap: 1rem;
+
+        li a {
+            font-size: 1.5rem;
+            color: white;
+            font-weight: 500;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            color: $orange;
+        }
+    }
+}
+
+.adult_active_nav a{
+    color: $orange;
+}
+
+
+.kids_search{
+    max-width: 1000px;
+    margin: 0 auto;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    column-gap: 1rem;
+
+    form{
+
+        input{
+            border-radius: 1.3rem 0px 1.3rem 0rem; 
+            border: $dark-purple solid 2px;
+            height: 3rem;
+            width: 20rem;
+            color: $dark-purple;
+        }
+
+        button{
+            background-color: $dark-purple;
+        }
+    }
+}
+}
+
+
+
+
+
+//Adults Footer
+
+
+
+//Kids Page Header
+
+.kids_header {
+    margin: 0 auto;
+    max-width: 270px;
+    padding: 1rem;
+    align-items: center;
+   background-color:$light-purple;
+    border-radius: 1.4rem 0px 1.4rem 0rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+}
+
+.kids_nav {
+    width: 50px;
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        column-gap: .2rem;
+
+        li a {
+            font-size: .8rem;
+            color: white;
+            font-weight: 400;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            color: $dark-violet;
+        }
+    }
+}
+
+.kids_active_nav a{
+    color: $dark-violet;
+}
+
+.kids_search{
+    max-width: 270px;
+    margin: 0 auto;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    column-gap: 1rem;
+
+    form{
+
+        input{
+            border-radius: 1.3rem 0px 1.3rem 0rem; 
+            border: $light-purple solid 2px;
+            height: 2.5rem;
+            width: 14rem;
+            color: $light-purple;
+        }
+
+        button{
+            background-color: $light-purple;
+        }
+    }
+}
+
+
+
+@media only screen and (min-width: 568px) {
+
+    .kids_header {
+        margin: 0 auto;
+        max-width: 450px;
+        padding: 2rem;
+        align-items: center;
+       background-color:$light-purple;
+        border-radius: 1.7rem 0px 1.7rem 0rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-bottom: 2.3rem;
+    }
+    
+    .kids_nav {
+        width: 200px;
+    
+        ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            column-gap: .6rem;
+    
+            li a {
+                font-size: .9rem;
+                color: white;
+                font-weight: 300;
+                text-decoration: none;
+            }
+    
+            li a:hover {
+                color: $dark-violet;
+            }
+        }
+    }
+    
+    .kids_active_nav a{
+        color: $dark-violet;
+    }
+
+    .kids_search{
+        max-width: 450px;
+        margin: 0 auto;
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        column-gap: 1rem;
+    
+        form{
+    
+            input{
+                border-radius: 1.3rem 0px 1.3rem 0rem; 
+                border: $light-purple solid 2px;
+                height: 2.7rem;
+                width: 15rem;
+                color: $light-purple;
+            }
+    
+            button{
+                background-color: $light-purple;
+            }
+        }
+    }
+}
+
+
+
+
+@media only screen and (min-width: 1024px) {
+
+    .kids_header {
+        margin: 0 auto;
+        max-width: 800px;
+        padding: 2rem;
+        align-items: center;
+       background-color:$light-purple;
+        border-radius: 1.7rem 0px 1.7rem 0rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-bottom: 2.5rem;
+    }
+    
+    .kids_nav {
+        width: 500px;
+    
+        ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            column-gap: .6rem;
+    
+            li a {
+                font-size: 1.4rem;
+                color: white;
+                font-weight: 600;
+                text-decoration: none;
+            }
+    
+            li a:hover {
+                color: $dark-violet;
+            }
+        }
+    }
+    
+    .kids_active_nav a{
+        color: $dark-violet;
+    }
+
+    .kids_search{
+        max-width: 800px;
+        margin: 0 auto;
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        column-gap: 1rem;
+    
+        form{
+    
+            input{
+                border-radius: 1.3rem 0px 1.3rem 0rem; 
+                border: $dark-purple solid 2px;
+                height: 3rem;
+                width: 17rem;
+                color: $light-purple;
+            }
+    
+            button{
+                background-color: $light-purple;
+            }
+        }
+    }
+}
+
+
+
+
+
+@media only screen and (min-width: 1550px) {
+
+.kids_header {
+    margin: 0 auto;
+    max-width: 1000px;
+    //padding: 2rem;
+    align-items: center;
+   background-color:$light-purple;
+    border-radius: 1.7rem 0px 1.7rem 0rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 3rem;
+}
+
+.kids_nav {
+    width: 700px;
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        column-gap: 1rem;
+
+        li a {
+            font-size: 1.5rem;
+            color: white;
+            font-weight: 500;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            color: $dark-violet;
+        }
+    }
+}
+
+.kids_active_nav a{
+    color: $dark-violet;
+}
+
+.kids_search{
+    max-width: 1000px;
+    margin: 0 auto;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    column-gap: 1rem;
+
+    form{
+
+        input{
+            border-radius: 1.3rem 0px 1.3rem 0rem; 
+            border: $light-purple solid 2px;
+            height: 3rem;
+            width: 20rem;
+        }
+
+        button{
+            background-color: $light-purple;
+        }
+    }
+}
+
+}

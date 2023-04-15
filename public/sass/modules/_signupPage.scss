@@ -1,0 +1,164 @@
+.signup-form{
+    margin-top: -4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 1rem;
+    align-items:center;
+    
+
+    input{
+        text-align: center;
+        color: $orange;
+        font-size: 1rem;
+        font-weight: 500;
+        min-width: 16rem;
+        max-width: 20rem;
+        height: 2rem;
+        border-radius: 1.5rem 0px 1.5rem 0rem;
+        border: none;
+    }
+
+    button{
+        text-align: center;
+        background-color: $orange;
+        font-size: 1rem;
+        font-weight: 500;
+        min-width: 16rem;
+        max-width: 20rem;
+        height: 2.5rem;
+        border-radius: 1.5rem 0px 1.5rem 0rem;
+        border: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 568px) {
+    .signup-form{
+        margin-top: 0rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 1rem;
+        align-items:center;
+        
+    
+        input{
+            text-align: center;
+            color: $orange;
+            font-size: 1rem;
+            font-weight: 500;
+            min-width: 16rem;
+            max-width: 21rem;
+            height: 1.75rem;
+            border-radius: 1.5rem 0px 1.5rem 0rem;
+            border: none;
+        }
+    
+        button{
+            text-align: center;
+            background-color: $orange;
+            font-size: 1rem;
+            font-weight: 500;
+            min-width: 16rem;
+            max-width: 21rem;
+            height: 2.5rem;
+            border-radius: 1.5rem 0px 1.5rem 0rem;
+            border: none;
+        }
+    }
+}
+
+
+
+
+
+
+@media only screen and (min-width: 1024px) {
+    .signup-form{
+        margin-top: -4rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 1rem;
+        align-items:center;
+        
+    
+        input{
+            text-align: center;
+            color: $orange;
+            font-size: 1rem;
+            font-weight: 500;
+            min-width: 18rem;
+            max-width: 22rem;
+            height: 2rem;
+            border-radius: 1.5rem 0px 1.5rem 0rem;
+            border: none;
+        }
+    
+        button{
+            text-align: center;
+            background-color: $orange;
+            font-size: 1rem;
+            font-weight: 500;
+            min-width: 18rem;
+            max-width: 22rem;
+            height: 2.5rem;
+            border-radius: 1.5rem 0px 1.5rem 0rem;
+            border: none;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 1550px) {
+.signup-form{
+    margin-top: -4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 1rem;
+    align-items:center;
+    
+
+    input{
+        text-align: center;
+        color: $orange;
+        font-size: 1rem;
+        font-weight: 600;
+        min-width: 20rem;
+        max-width: 25rem;
+        height: 2.5rem;
+        border-radius: 1.5rem 0px 1.5rem 0rem;
+        border: none;
+    }
+
+    button{
+        text-align: center;
+        background-color: $orange;
+        font-size: 1rem;
+        font-weight: 600;
+        min-width: 20rem;
+        max-width: 25rem;
+        height: 2.5rem;
+        border-radius: 1.5rem 0px 1.5rem 0rem;
+        border: none;
+    }
+}
+}

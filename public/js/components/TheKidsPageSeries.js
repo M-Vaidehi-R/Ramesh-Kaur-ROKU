@@ -66,28 +66,32 @@ export default {
 
   template: `
   <div class="kids_header">
-    <nav>
-      <div class="kids_nav">
+
+  <div>
+  <!--<img :src="" alt="user image">-->
+  </div>
+
+    <nav class="kids_nav">
         <ul>
           <li><router-link to="/kidspagemovies">Movies</router-link></li>
           <li><router-link to="/kidspageseries">Series</router-link></li>
-          <li><router-link to="/kidspageanimation">Animation</router-link></li>
+          <li class="kids_active_nav"><router-link to="/kidspageanimation">Animation</router-link></li>
         </ul>
-      </div>
-      </nav>
-
-      <div>
-        <!--hamburger -->
-      </div>
-
-      <div>
-        <!--<img :src="" alt="user image">-->
-      </div>
-   
+      </nav> 
   </div>
 
   <div>
-    <div v-for="(series, index) in series.slice(0, visibleSeries)" :key="series.id">
+  <div class="kids_search">
+    <form @submit.prevent="searchSeries">
+      <input type="text" v-model="searchTerm" placeholder="Search for movies">
+      <button type="submit"><img src="/images-roku/search.png"></button>
+    </form>
+  </div>
+</div>
+
+  <div class="kids_page_display">
+  <div class="kids_title_display">
+    <div class="kids_title_container" v-for="(series, index) in series.slice(0, visibleSeries)" :key="series.id">
       <router-link :to="{ name: 'SeriesDetails', params: { seriesId: series.id } }">
         <img :src="series.image" :alt="series.title">
       </router-link>
@@ -96,7 +100,8 @@ export default {
       <p>Rating: {{ series.imDbRating }}/10</p>
       <button @click="showSeries(series)">More details</button>
     </div>
-    <div v-if="visibleSeries <series.length">
+    </div>
+    <div class="kids-show-more" v-if="visibleSeries <series.length">
       <button @click="showMoreSeries">Show more series</button>
     </div>
   </div>
@@ -114,15 +119,6 @@ export default {
 
   
       <div>
-      <div>
-        <form @submit.prevent="searchSeries">
-          <input type="text" v-model="searchTerm" placeholder="Search for movies">
-          <button type="submit">Search</button>
-        </form>
-      </div>
-    </div>
-  
-      <div>
         <router-link to="/settings">Settings</router-link>
       </div>
   
@@ -136,8 +132,8 @@ export default {
       <p>Copyright © 2023 _ROKU FLASHBACK_</p>
     </section>
   `
-  };
-  
+};
+
 
 
 

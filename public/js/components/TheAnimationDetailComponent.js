@@ -4,11 +4,15 @@ export default {
 
   template: `
   
-  <div>
+  <div  class="media-details">
 
-      <h1>{{animation.title}}</h1>
       <img :src="animation.image" :alt="animation.title">
-      <p>{{ animation.plot }}</p>
+
+      <div class="media-text-details">
+        <p><span class="title">Plot: </span>{{ animation.plot }}</p>
+        <p><span class="title">Genre: </span>{{ animation.genre }}</p>
+        <p><span class="title">Duration: </span>{{ animation.duration }} minutes</p>
+      </div>
 
   </div>
 

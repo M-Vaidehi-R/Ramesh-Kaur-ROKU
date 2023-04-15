@@ -67,14 +67,11 @@ export default {
       <div class="adult_nav">
         <ul>
         <li><router-link to="/adultpagemovies">Movies</router-link></li>
-        <li><router-link to="/adultpageseries">Series</router-link></li>
+        <li class="adult_active_nav"><router-link to="/adultpageseries">Series</router-link></li>
         <li><router-link to="/adultpagedocumentaries">Documentaries</router-link></li>
         </ul>
       </div>
 
-      <div>
-        <!--hamburger -->
-      </div>
 
       <div>
         <!--<img :src="" alt="user image">-->
@@ -83,13 +80,24 @@ export default {
   </div>
 
   <div>
-    <div v-for="(series, index) in series.slice(0, visibleSeries)" :key="series.id">
+  <div class="search">
+    <form @submit.prevent="searchSeries">
+      <input type="text" v-model="searchTerm" placeholder="Search for movies">
+      <button type="submit"><img src="/images-roku/search.png"></button>
+    </form>
+  </div>
+</div>
+
+  <div class="page_display">
+  <div class="title_display">
+    <div class="title_container" v-for="(series, index) in series.slice(0, visibleSeries)" :key="series.id">
       <router-link :to="{ name: 'SeriesDetails', params: { seriesId: series.id } }">
         <img :src="series.image" :alt="series.title">
       </router-link>
       <h2>{{ series.title }}</h2>
     </div>
-    <div v-if="visibleSeries <series.length">
+    </div>
+    <div class="show-more" v-if="visibleSeries <series.length">
       <button @click="showMoreSeries">Show more series</button>
     </div>
   </div>
@@ -104,15 +112,6 @@ export default {
     <div>
       <router-link to="/">Home</router-link>
     </div>
-
-    <div>
-    <div>
-      <form @submit.prevent="searchSeries">
-        <input type="text" v-model="searchTerm" placeholder="Search for movies">
-        <button type="submit">Search</button>
-      </form>
-    </div>
-  </div>
 
     <div>
       <router-link to="/settings">Settings</router-link>
