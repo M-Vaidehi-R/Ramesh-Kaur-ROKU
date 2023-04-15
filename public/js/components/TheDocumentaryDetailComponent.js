@@ -6,11 +6,15 @@ export default {
 
     template: `
     
-    <div>
+    <div  class="media-details">
 
-        <h1>{{documentary.title}}</h1>
         <img :src="documentary.image" :alt="documentary.title">
-        <p>{{ documentary.plot }}</p>
+        
+        <div class="media-text-details">
+        <p><span class="title">Plot: </span>{{ documentary.plot }}</p>
+        <p><span class="title">Genre: </span>{{ documentary.genre }}</p>
+        <p><span class="title">Duration: </span>{{ documentary.duration }} minutes</p>
+        </div>
 
     </div>
 

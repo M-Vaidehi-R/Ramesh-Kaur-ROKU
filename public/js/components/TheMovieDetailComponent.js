@@ -1,5 +1,3 @@
-
-
 //const apiKey = 'k_qpian6m7';
 
 export default {
@@ -8,11 +6,15 @@ export default {
 
     template: `
     
-    <div>
+    <div class="media-details">
 
-        <h1>{{movie.title}}</h1>
         <img :src="movie.image" :alt="movie.title">
-        <p>{{ movie.plot }}</p>
+
+        <div class="media-text-details">
+          <p><span class="title">Plot: </span>{{ movie.plot }}</p>
+          <p><span class="title">Genre: </span>{{ movie.genre }}</p>
+          <p><span class="title">Duration: </span>{{ movie.duration }} minutes</p>
+        </div>
 
     </div>
 

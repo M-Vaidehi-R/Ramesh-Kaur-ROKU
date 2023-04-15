@@ -11,7 +11,7 @@ export default {
       visibleDocumentaries: 8
     };
   },
-  
+
   mounted() {
     this.fetchDocumentaries();
   },
@@ -30,14 +30,14 @@ export default {
             top: 0,
             behavior: 'smooth'
           });
-          
+
           this.visibleDocumentaries = 8; // reset visibleDocumentaries to 8
         })
         .catch(error => {
           console.error(error);
         });
     },
-    
+
 
     fetchDocumentaries() {
       const requestOptions = {
@@ -71,12 +71,8 @@ export default {
         <ul>
         <li><router-link to="/adultpagemovies">Movies</router-link></li>
         <li><router-link to="/adultpageseries">Series</router-link></li>
-        <li><router-link to="/adultpagedocumentaries">Documentaries</router-link></li>
+        <li class="adult_active_nav"><router-link to="/adultpagedocumentaries">Documentaries</router-link></li>
         </ul>
-      </div>
-
-      <div>
-        <!--hamburger -->
       </div>
 
       <div>
@@ -85,14 +81,26 @@ export default {
     </nav>
   </div>
 
+  
   <div>
-  <div v-for="(documentary, index) in documentaries.slice(0, visibleDocumentaries)" :key="documentary.id">
+  <div class="search">
+    <form @submit.prevent="searchDocumentaries">
+      <input type="text" v-model="searchTerm" placeholder="Search for documentaries">
+      <button type="submit"><img src="/images-roku/search.png"></button>
+    </form>
+  </div>
+</div>
+
+  <div class="page_display">
+  <div class="title_display">
+  <div class="title_container" v-for="(documentary, index) in documentaries.slice(0, visibleDocumentaries)" :key="documentary.id">
     <router-link :to="{ name: 'DocumentaryDetails', params: { documentaryId: documentary.id } }">
       <img :src="documentary.image" :alt="documentary.title">
     </router-link>
     <h2>{{ documentary.title }}</h2>
   </div>
-  <div v-if="visibleDocumentaries < documentaries.length">
+  </div>
+  <div class="show-more" v-if="visibleDocumentaries < documentaries.length">
     <button @click="showMoreDocumentaries">Show more documentaries</button>
   </div>
 </div>
@@ -107,15 +115,6 @@ export default {
     <div>
       <router-link to="/">Home</router-link>
     </div>
-
-    <div>
-    <div>
-      <form @submit.prevent="searchDocumentaries">
-        <input type="text" v-model="searchTerm" placeholder="Search for documentaries">
-        <button type="submit">Search</button>
-      </form>
-    </div>
-  </div>
 
     <div>
       <router-link to="/settings">Settings</router-link>

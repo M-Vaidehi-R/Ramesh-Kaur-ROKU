@@ -1,42 +1,56 @@
 export default {
-    name: 'TheSignUpComponent',
-    template: `
+  name: 'TheSignUpComponent',
+  template: `
+
+    <section class="container">
+
+      <h2 hidden>Sign In Form</h2>
+        <div class="sign-in-logo">
+            <img src="/images-roku/roku_logo.png" alt="logo">
+            <hr>
+            <hr>
+            <hr>
+        </div>
+        
       <div>
         <form class="signup-form">
           <div>
-            <label for="fname">First Name</label>
-            <input v-model="firstName" type="text" name="fname" required>
+            <label hidden for="fname">First Name</label>
+            <input v-model="firstName" type="text" name="fname"  placeholder="FIRST NAME" required>
           </div>
   
           <div>
-            <label for="lname">Last Name</label>
-            <input v-model="lastName" type="text" name="lname" required>
+            <label hidden for="lname">Last Name</label>
+            <input v-model="lastName" type="text" name="lname" placeholder="LAST NAME" required>
           </div>
   
           <div>
-            <label for="age">Age</label>
-            <input v-model.number="age" type="number" name="age" required>
+            <label hidden for="age">Age</label>
+            <input v-model.number="age" type="number" name="age" 
+            placeholder="AGE" required>
           </div>
   
           <div>
-            <label for="email">Email</label>
-            <input v-model="email" type="email" name="email" required>
+            <label hidden for="email">Email</label>
+            <input v-model="email" type="email" name="email" 
+            placeholder="E-MAIL ID" required>
           </div>
   
           <div>
-            <label for="username">Username</label>
-            <input v-model="username" type="text" name="username" required>
+            <label hidden for="username">Username</label>
+            <input v-model="username" type="text" name="username" 
+            placeholder="USER NAME" required>
           </div>
   
           <div>
-            <label for="password">Password</label>
-            <input v-model="password" type="password" name="password" required>
+            <label hidden for="password">Password</label>
+            <input v-model="password" type="password" name="password" placeholder="PASSWORD" required>
           </div>
   
           <div>
-            <label for="avatar">User Image</label>
-            <input v-model="avatar" type="text" name="avatar" required>
-            <p>Select from: <span>fun, happy, grumpy, sad, default</span></p>
+            <label hidden for="avatar">User Image</label>
+            <input v-model="avatar" type="text" name="avatar" placeholder="SELECT A PROFILE IMG" required>
+            <p><span>fun, happy, grumpy, sad, default</span></p>
           </div>
           
           <div>
@@ -44,61 +58,61 @@ export default {
           </div>
         </form>
       </div>
+      </section>
     `,
-  
-    data() {
-      return {
-        fname: '',
-        lname: '',
-        age: null,
-        email: '',
-        username: '',
-        password: '',
-        avatar: ''
-      }
-    },
-  
-    methods: {
-        submitForm() {
-            fetch('/ums/signup', {
-                method: 'POST',
-                headers: {
-                    'Accept': 'application/json, text/plain, */*',
-                    'Content-type': 'application/json'
-                },
 
-              body: JSON.stringify({
-                fname: this.firstName,
-                lname: this.lname,
-                age: this.age,
-                email: this.email,
-                username: this.username,
-                password: this.password,
-                avatar: this.avatar
-              })
-            })
-            .then(response => response.json())
-            .then(data => {
-              console.log(data);
-              if (data.success) {
-                this.$emit('signedUp');
-                this.fname = '';
-                this.lname = '';
-                this.age = null;
-                this.email = '';
-                this.username = '';
-                this.password = '';
-                this.avatar = '';
-              } else {
-                this.errorMessage = data.message;
-              }
-            })
-            .catch(error => {
-              console.error('Error:', error);
-            });
-          }
-          
-        
+  data() {
+    return {
+      fname: '',
+      lname: '',
+      age: null,
+      email: '',
+      username: '',
+      password: '',
+      avatar: ''
     }
+  },
+
+  methods: {
+    submitForm() {
+      fetch('/ums/signup', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json, text/plain, */*',
+          'Content-type': 'application/json'
+        },
+
+        body: JSON.stringify({
+          fname: this.firstName,
+          lname: this.lname,
+          age: this.age,
+          email: this.email,
+          username: this.username,
+          password: this.password,
+          avatar: this.avatar
+        })
+      })
+        .then(response => response.json())
+        .then(data => {
+          console.log(data);
+          if (data.success) {
+            this.$emit('signedUp');
+            this.fname = '';
+            this.lname = '';
+            this.age = null;
+            this.email = '';
+            this.username = '';
+            this.password = '';
+            this.avatar = '';
+          } else {
+            this.errorMessage = data.message;
+          }
+        })
+        .catch(error => {
+          console.error('Error:', error);
+        });
+    }
+
+
   }
-  
+}
