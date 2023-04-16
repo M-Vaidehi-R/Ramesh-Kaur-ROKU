@@ -105,29 +105,5 @@ export default {
   </div>
 </div>
 
-
-  <section>
-    <h2>footer</h2>
-
-    <div class="go_back_footer"></div>
-
-    <div class="footer_menu">
-    <div>
-      <router-link to="/">Home</router-link>
-    </div>
-
-    <div>
-      <router-link to="/settings">Settings</router-link>
-    </div>
-
-    <div>
-      <router-link to="/watchlist">Watchlist</router-link>
-    </div>
-    </div>
-
-    <div class="go_front_footer"></div>
-
-    <p>Copyright © 2023 _ROKU FLASHBACK_</p>
-  </section>
 `
 };

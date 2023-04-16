@@ -4,6 +4,7 @@ import EntryPage from './components/TheEntryPage.js';
 import LogInPage from './components/TheLoginComponent.js';
 import SignUpComponent from './components/ThesignUpComponent.js';
 import AllUsersPage from './components/TheAllUsersComponent.js';
+import CommentsPage from './components/TheCommentsComponent.js';
 
 
 import AdultMoviePage from './components/TheAdultPageMovies.js';
