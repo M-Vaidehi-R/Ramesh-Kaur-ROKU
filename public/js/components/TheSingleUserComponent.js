@@ -7,7 +7,7 @@ export default{
     template:`
     <div @click="navToHomePage"  class="card rounded displayuser">
     <div class="card-body text-center">
-        <img :src='"images/" + user.avatar' class="rounded-circle img-fluid">
+        <img :src='"images-roku/" + user.avatar' class="rounded-circle img-fluid">
         <p>{{user.username}}</p>
     </div>
 </div>

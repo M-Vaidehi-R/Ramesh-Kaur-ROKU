@@ -244,12 +244,12 @@
     }
 }
 
-.adult_active_nav a{
-    color: $orange;
-}
+li.adult_active_nav a {
+    color: orange;
+  }
 
 
-.kids_search{
+.search{
     max-width: 1000px;
     margin: 0 auto;
     align-items: center;
@@ -320,7 +320,7 @@
     }
 }
 
-.kids_active_nav a{
+.kids_active_nav{
     color: $dark-violet;
 }
 
