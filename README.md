@@ -1,8 +1,5 @@
-## Things To Add:
-* Like Share Comment
-* Add Videos 
-* Add Profile Pictures
 
+![roku_logo](https://user-images.githubusercontent.com/90973094/232311051-7a282f83-48bb-43a1-85a8-cde55dd4e8ed.png)
 
 
 
