@@ -10,8 +10,9 @@ export default {
         <img :src="movie.image" :alt="movie.title">
         <div class="media-text-details">
           <p><span class="title">Plot: </span>{{ movie.plot }}</p>
-          <p><span class="title">Genre: </span>{{ movie.genre }}</p>
-          <p><span class="title">Duration: </span>{{ movie.duration }} minutes</p>
+          <p><span class="title">Year: </span>{{ movie.description }}</p>
+           <p><span class="title">IMDB Rating: </span>{{ movie.imDbRating }}</p>
+          <p><span class="title">Duration: </span>{{ movie.runtimeStr }} minutes</p>
         </div>
         <div class="video-button">
       <button @click="playVideo">Play Video</button>
