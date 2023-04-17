@@ -10,8 +10,9 @@ export default {
 
       <div class="media-text-details">
         <p><span class="title">Plot: </span>{{ animation.plot }}</p>
-        <p><span class="title">Genre: </span>{{ animation.genre }}</p>
-        <p><span class="title">Duration: </span>{{ animation.duration }} minutes</p>
+          <p><span class="title">Year: </span>{{ animation.description }}</p>
+           <p><span class="title">IMDB Rating: </span>{{ animation.imDbRating }}</p>
+          <p><span class="title">Duration: </span>{{ animation.runtimeStr }} minutes</p>
       </div>
           <div class="video-button">
       <button @click="playVideo">Play Video</button>
