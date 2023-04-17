@@ -50,7 +50,7 @@ export default {
           <div>
             <label hidden for="avatar">User Image</label>
             <input v-model="avatar" type="text" name="avatar" placeholder="SELECT A PROFILE IMG" required>
-            <p><span>fun, happy, grumpy, sad, default</span></p>
+            <p><span>1.png, 2.png, 3.png, 4.png</span></p>
           </div>
           
           <div>
