@@ -12,8 +12,9 @@ export default {
 
         <div class="media-text-details">
           <p><span class="title">Plot: </span>{{ series.plot }}</p>
-          <p><span class="title">Genre: </span>{{ series.genre }}</p>
-          <p><span class="title">Duration: </span>{{ series.duration }} minutes</p>
+          <p><span class="title">Year: </span>{{ series.description }}</p>
+           <p><span class="title">IMDB Rating: </span>{{ series.imDbRating }}</p>
+          <p><span class="title">Duration: </span>{{ series.runtimeStr }} minutes</p>
         </div>
 
         <div class="video-button">
