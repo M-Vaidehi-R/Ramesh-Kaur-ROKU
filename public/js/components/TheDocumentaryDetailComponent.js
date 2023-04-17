@@ -12,8 +12,9 @@ export default {
         
         <div class="media-text-details">
         <p><span class="title">Plot: </span>{{ documentary.plot }}</p>
-        <p><span class="title">Genre: </span>{{ documentary.genre }}</p>
-        <p><span class="title">Duration: </span>{{ documentary.duration }} minutes</p>
+          <p><span class="title">Year: </span>{{ documentary.description }}</p>
+           <p><span class="title">IMDB Rating: </span>{{ documentary.imDbRating }}</p>
+          <p><span class="title">Duration: </span>{{ documentary.runtimeStr }} minutes</p>
         </div>
         <div class="video-button">
       <button @click="playVideo">Play Video</button>
